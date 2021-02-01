@@ -9,13 +9,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
-//todo: add error checking
 namespace EncryptionTool
 {
     public partial class Form1 : Form
     {
-        //todo: change  to enum if using multiple
         private const string ENCRYPT_EXTENSION = ".enc";
+
+        private const string KEY_INVALID = "Key is invalid!";
+        private const string CIPHER_INVALID = "Cipher Option is invalid!";
+        private const string FILE_EXT_INVALID = "File extension is invalid!";
+        private const string ENCRYPT_SUCCESS = "File encrypted successfully!";
+        private const string DECRYPT_SUCCESS = "File decrypted successfully!";
 
         FormPopup formSuccessPopup;
         FormPopup formFailPopup;
@@ -28,7 +32,7 @@ namespace EncryptionTool
             Decrypt
         }
 
-        public string[] cipherOptions = { nameof(CaesarCipher), nameof(ColumnarTransposition) };
+        public string[] cipherOptions = { nameof(CaesarCipher), nameof(ColumnarTransposition), nameof(XorCipher) };
 
         public Form1()
         {
@@ -52,7 +56,7 @@ namespace EncryptionTool
 
         private void Cipher(int cryptOption)
         {//todo: use properties of a file to determine which encryption used on the file
-            //CaesarCipher caesarCipher;
+
             CipherBase cipher;
 
             string inputFileContents = "";
@@ -81,25 +85,33 @@ namespace EncryptionTool
             switch (cipherChoice) 
             {
                 case nameof(CaesarCipher)://todo find a better way
-                    int parsedKey;
-                    if (!int.TryParse(key, out parsedKey))
+                    int parsedKeyInt;
+                    if (!int.TryParse(key, out parsedKeyInt))
                     {
-                        HandleException(new Exception("Key is invalid!"));
+                        HandleException(new Exception(KEY_INVALID));
                     }
-                    cipher = new CaesarCipher(parsedKey);
+                    cipher = new CaesarCipher(parsedKeyInt);
                     break;
                 case nameof(ColumnarTransposition):
                     cipher = new ColumnarTransposition(key);
                     break;
+                case nameof(XorCipher):
+                    char parsedKeyChar;
+                    if (!char.TryParse(key, out parsedKeyChar))
+                    {
+                        HandleException(new Exception(KEY_INVALID));
+                    }
+                    cipher = new XorCipher(parsedKeyChar);
+                    break;
                 default:
                     cipher = new CaesarCipher(0);
-                    HandleException(new Exception("Cipher Option is invalid!"));
+                    HandleException(new Exception(CIPHER_INVALID));
                     break;
             }
 
             if (!CheckFileExtension(cryptOption, fileName))
             {
-                HandleException(new Exception("File extension is invalid!"));
+                HandleException(new Exception(FILE_EXT_INVALID));
             }
 
             switch (cryptOption)
@@ -107,18 +119,18 @@ namespace EncryptionTool
                 case (int)CryptOptions.Encrypt:
                     outputFileContents = cipher.Encrypt(inputFileContents);
                     File.WriteAllText(filePath + fileName + ENCRYPT_EXTENSION, outputFileContents);
-                    formSuccessPopup = new FormPopup("File encrypted successfully!");
+                    formSuccessPopup = new FormPopup(ENCRYPT_SUCCESS);
                     break;
 
                 case (int)CryptOptions.Decrypt:
                     outputFileContents = cipher.Decrypt(inputFileContents);
                     File.WriteAllText(filePath + fileName.Substring(0, fileName.LastIndexOf(".")), outputFileContents);
-                    formSuccessPopup = new FormPopup("File decrypted successfully!");
+                    formSuccessPopup = new FormPopup(DECRYPT_SUCCESS);
                     break;
 
                 default:                   
                     formSuccessPopup = new FormPopup("");
-                    HandleException(new Exception("Crypt Option is invalid!"));
+                    HandleException(new Exception(CIPHER_INVALID));
                     break;
             }
 

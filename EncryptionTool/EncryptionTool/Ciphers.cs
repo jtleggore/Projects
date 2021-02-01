@@ -209,4 +209,33 @@ namespace EncryptionTool
             return matrix;
         }
     }
+
+    /// <summary>
+    /// Xor's each character in the text by the character key
+    /// </summary>
+    internal class XorCipher : Cipher<char>
+    {
+        public XorCipher(char key) : base(key) { }
+
+        public override string Encrypt(string plainText)
+        {
+            string cipherText;
+            StringBuilder cipherTextBuilder = new StringBuilder();
+
+            //do an xor on each character in the text
+            for (int i = 0; i < plainText.Length; i++)
+            {
+                cipherTextBuilder.Append(char.ToString((char)(plainText[i] ^ _key)));
+            }
+
+            cipherText = cipherTextBuilder.ToString();
+            return cipherText;
+        }
+
+        public override string Decrypt(string cipherText)
+        {
+            //encrypt and decrypt use the same code
+            return Encrypt(cipherText);
+        }
+    }
 }
