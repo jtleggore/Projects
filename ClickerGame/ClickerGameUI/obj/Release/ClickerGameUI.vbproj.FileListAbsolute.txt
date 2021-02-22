@@ -1,0 +1,4 @@
+C:\Users\jake.leggore\Documents\Projects\ClickerGame\ClickerGameUI\bin\Release\ClickerGameUI.exe.config
+C:\Users\jake.leggore\Documents\Projects\ClickerGame\ClickerGameUI\obj\Release\ClickerGameUI.GameForm.resources
+C:\Users\jake.leggore\Documents\Projects\ClickerGame\ClickerGameUI\obj\Release\ClickerGameUI.Resources.resources
+C:\Users\jake.leggore\Documents\Projects\ClickerGame\ClickerGameUI\obj\Release\ClickerGameUI.vbproj.GenerateResource.Cache

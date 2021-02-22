@@ -1,0 +1,7 @@
+C:\Users\jake.leggore\Documents\Projects\ClickerGame\ClickerGameFunctions\bin\Release\ClickerGameFunctions.XML
+C:\Users\jake.leggore\Documents\Projects\ClickerGame\ClickerGameFunctions\bin\Release\ClickerGameFunctions.dll
+C:\Users\jake.leggore\Documents\Projects\ClickerGame\ClickerGameFunctions\bin\Release\ClickerGameFunctions.pdb
+C:\Users\jake.leggore\Documents\Projects\ClickerGame\ClickerGameFunctions\bin\Release\FSharp.Core.dll
+C:\Users\jake.leggore\Documents\Projects\ClickerGame\ClickerGameFunctions\bin\Release\FSharp.Core.xml
+C:\Users\jake.leggore\Documents\Projects\ClickerGame\ClickerGameFunctions\obj\Release\ClickerGameFunctions.dll
+C:\Users\jake.leggore\Documents\Projects\ClickerGame\ClickerGameFunctions\obj\Release\ClickerGameFunctions.pdb

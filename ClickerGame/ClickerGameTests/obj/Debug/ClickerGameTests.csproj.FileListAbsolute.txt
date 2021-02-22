@@ -1,0 +1,9 @@
+C:\Users\jake.leggore\Documents\Projects\ClickerGame\Compile\NUnit3.TestAdapter.dll
+C:\Users\jake.leggore\Documents\Projects\ClickerGame\Compile\NUnit3.TestAdapter.pdb
+C:\Users\jake.leggore\Documents\Projects\ClickerGame\Compile\nunit.engine.dll
+C:\Users\jake.leggore\Documents\Projects\ClickerGame\Compile\nunit.engine.api.dll
+C:\Users\jake.leggore\Documents\Projects\ClickerGame\Compile\ClickerGameTests.dll
+C:\Users\jake.leggore\Documents\Projects\ClickerGame\Compile\ClickerGameTests.pdb
+C:\Users\jake.leggore\Documents\Projects\ClickerGame\ClickerGameTests\obj\Debug\ClickerGameTests.csprojResolveAssemblyReference.cache
+C:\Users\jake.leggore\Documents\Projects\ClickerGame\ClickerGameTests\obj\Debug\ClickerGameTests.dll
+C:\Users\jake.leggore\Documents\Projects\ClickerGame\ClickerGameTests\obj\Debug\ClickerGameTests.pdb

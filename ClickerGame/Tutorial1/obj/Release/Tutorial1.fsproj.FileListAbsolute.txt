@@ -1,0 +1,7 @@
+C:\Users\jake.leggore\Documents\Projects\ClickerGame\Tutorial1\bin\Release\Tutorial1.XML
+C:\Users\jake.leggore\Documents\Projects\ClickerGame\Tutorial1\bin\Release\Tutorial1.exe
+C:\Users\jake.leggore\Documents\Projects\ClickerGame\Tutorial1\bin\Release\Tutorial1.pdb
+C:\Users\jake.leggore\Documents\Projects\ClickerGame\Tutorial1\bin\Release\FSharp.Core.dll
+C:\Users\jake.leggore\Documents\Projects\ClickerGame\Tutorial1\bin\Release\FSharp.Core.xml
+C:\Users\jake.leggore\Documents\Projects\ClickerGame\Tutorial1\obj\Release\Tutorial1.exe
+C:\Users\jake.leggore\Documents\Projects\ClickerGame\Tutorial1\obj\Release\Tutorial1.pdb

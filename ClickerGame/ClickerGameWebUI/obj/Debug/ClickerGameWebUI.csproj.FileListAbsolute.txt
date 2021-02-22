@@ -1,0 +1,5 @@
+C:\Users\jake.leggore\Documents\Projects\ClickerGame\ClickerGameWebUI\bin\ClickerGameWebUI.dll.config
+C:\Users\jake.leggore\Documents\Projects\ClickerGame\ClickerGameWebUI\bin\ClickerGameWebUI.dll
+C:\Users\jake.leggore\Documents\Projects\ClickerGame\ClickerGameWebUI\bin\ClickerGameWebUI.pdb
+C:\Users\jake.leggore\Documents\Projects\ClickerGame\ClickerGameWebUI\obj\Debug\ClickerGameWebUI.dll
+C:\Users\jake.leggore\Documents\Projects\ClickerGame\ClickerGameWebUI\obj\Debug\ClickerGameWebUI.pdb

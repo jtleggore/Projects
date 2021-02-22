@@ -1,0 +1,2 @@
+C:\Users\jake.leggore\Documents\Projects\ClickerGame\ClickerGameLogic\obj\Release\ClickerGameLogic.Resources.resources
+C:\Users\jake.leggore\Documents\Projects\ClickerGame\ClickerGameLogic\obj\Release\ClickerGameLogic.vbproj.GenerateResource.Cache

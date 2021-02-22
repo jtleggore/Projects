@@ -1,0 +1,9 @@
+C:\Users\jake.leggore\Documents\Projects\ClickerGame\ClickerGameLogic\obj\Debug\ClickerGameLogic.vbprojResolveAssemblyReference.cache
+C:\Users\jake.leggore\Documents\Projects\ClickerGame\ClickerGameLogic\obj\Debug\ClickerGameLogic.Resources.resources
+C:\Users\jake.leggore\Documents\Projects\ClickerGame\ClickerGameLogic\obj\Debug\ClickerGameLogic.vbproj.GenerateResource.Cache
+C:\Users\jake.leggore\Documents\Projects\ClickerGame\ClickerGameLogic\obj\Debug\ClickerGameLogic.xml
+C:\Users\jake.leggore\Documents\Projects\ClickerGame\Compile\ClickerGameLogic.dll
+C:\Users\jake.leggore\Documents\Projects\ClickerGame\Compile\ClickerGameLogic.pdb
+C:\Users\jake.leggore\Documents\Projects\ClickerGame\Compile\ClickerGameLogic.xml
+C:\Users\jake.leggore\Documents\Projects\ClickerGame\ClickerGameLogic\obj\Debug\ClickerGameLogic.dll
+C:\Users\jake.leggore\Documents\Projects\ClickerGame\ClickerGameLogic\obj\Debug\ClickerGameLogic.pdb

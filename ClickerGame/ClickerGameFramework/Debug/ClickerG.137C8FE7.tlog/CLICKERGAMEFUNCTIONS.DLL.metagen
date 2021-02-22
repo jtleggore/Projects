@@ -1,0 +1,19 @@
+  FSharpSignatureData.ClickerGameFunctions - Embedded, ContainedInManifestFile, 
+  FSharpOptimizationData.ClickerGameFunctions - Embedded, ContainedInManifestFile, 
+ImageRuntimeVersion: v4.0.30319
+Assembly ClickerGameFunctions, Version=1.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey, EnableJITcompileOptimizer, EnableJITcompileTracking
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly FSharp.Core, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Class ClickerGameFunctions.BuildingFunctions: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed
+  Methods:
+    nextCost(Single, Single): PrivateScope, Public, Static
+    nextDPT(Single, Single): PrivateScope, Public, Static
+Class ClickerGameFunctions.MainFunctions: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed
+  Properties:
+    Single example1 'get ' : 
+  Methods:
+    moneyMultiplyer(Single, Single, Single): PrivateScope, Public, Static
+    get_example1(): PrivateScope, Public, Static, SpecialName

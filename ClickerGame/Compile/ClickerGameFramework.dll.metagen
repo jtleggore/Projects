@@ -1,0 +1,46 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly ClickerGameFramework, Version=1.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly ClickerGameFunctions, Version=1.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=None, flags=EnableJITcompileOptimizer, EnableJITcompileTracking
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class ClickerGameFramework.Building: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String, Single, Single, Single): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, Single, Single): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    getBaseDPT(): PrivateScope, Public, HideBySig
+    getBaseCost(): PrivateScope, Public, HideBySig
+    getCurrentDPT(): PrivateScope, Public, HideBySig
+    setCurrentDPT(Single): PrivateScope, Public, HideBySig
+    getCurrentCost(): PrivateScope, Public, HideBySig
+    setCurrentCost(Single): PrivateScope, Public, HideBySig
+    getCostMultiplyer(): PrivateScope, Public, HideBySig
+    setCostMultiplyer(Single): PrivateScope, Public, HideBySig
+    getName(): PrivateScope, Public, HideBySig
+    getQuantity(): PrivateScope, Public, HideBySig
+    addToQuantity(Int32): PrivateScope, Public, HideBySig
+    addDPTToMainOperator(): PrivateScope, Public, HideBySig
+    updateCost(): PrivateScope, Public, HideBySig
+    Test(Int32): PrivateScope, Public, HideBySig
+Class ClickerGameFramework.Upgrade: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class ClickerGameFramework.MainOperator: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    InitializeMainOperator(): PrivateScope, Public, Static, HideBySig
+    getBaseDPC(): PrivateScope, Public, Static, HideBySig
+    getBaseDPT(): PrivateScope, Public, Static, HideBySig
+    getCurrentDPT(): PrivateScope, Public, Static, HideBySig
+    setCurrentDPT(Single): PrivateScope, Public, Static, HideBySig
+    getCurrentDPC(): PrivateScope, Public, Static, HideBySig
+    setCurrentDPC(Single): PrivateScope, Public, Static, HideBySig
+    getCurrentDollars(): PrivateScope, Public, Static, HideBySig
+    addToCurrentDollars(Single): PrivateScope, Public, Static, HideBySig
+    doClick(Single): PrivateScope, Public, Static, HideBySig
