@@ -10,24 +10,32 @@ using namespace ClickerGameFunctions;
 //todo: determine where best to use	* and &
 namespace ClickerGameFramework 
 {
+	//Round to 2 decimal places
+	//Note: not working
+	float round(float number)
+	{
+		float newVal = (int)(number * 100 + 0.5);
+		return (float)newVal / 100;
+	}
+
 	Building::Building(String^ name, float baseDPT, float baseCost)
 	{		
 		_name = name;
-		_baseDPT = baseDPT;
-		_baseCost = baseCost;
+		_baseDPT = round(baseDPT);
+		_baseCost = round(baseCost);
 		_currentDPT = DEFAULT_DPT;
-		_currentCost = baseCost;
+		_currentCost = round(baseCost);
 		_costMultiplyer = DEFAULT_MULT;
 	}
 
 	Building::Building(String^ name, float baseDPT, float baseCost, float costMult)
 	{
 		_name = name;
-		_baseDPT = baseDPT;
-		_baseCost = baseCost;
+		_baseDPT = round(baseDPT);
+		_baseCost = round(baseCost);
 		_currentDPT = DEFAULT_DPT;
-		_currentCost = baseCost;
-		_costMultiplyer = costMult;
+		_currentCost = round(baseCost);
+		_costMultiplyer = round(costMult);
 	}
 
 	const float Building::getBaseDPT()
@@ -49,7 +57,7 @@ namespace ClickerGameFramework
 	{
 		if (amount >= 0) 
 		{
-			Building::_currentDPT = amount;
+			Building::_currentDPT = round(amount);
 		}
 	}
 
@@ -62,7 +70,7 @@ namespace ClickerGameFramework
 	{
 		if (amount > 0)
 		{
-			Building::_currentCost = amount;
+			Building::_currentCost = round(amount);
 		}
 	}
 
@@ -75,7 +83,7 @@ namespace ClickerGameFramework
 	{
 		if (mult >= 1)
 		{
-			Building::_costMultiplyer = mult;
+			Building::_costMultiplyer = round(mult);
 		}
 	}
 
@@ -109,7 +117,7 @@ namespace ClickerGameFramework
 		float costMult = Building::getCostMultiplyer();
 
 		float nextCost = BuildingFunctions::nextCost(currentCost, costMult);
-		Building::setCurrentCost(nextCost);
+		Building::setCurrentCost(round(nextCost));
 	}
 
 	int Building::Test(int test)
@@ -145,7 +153,7 @@ namespace ClickerGameFramework
 	{
 		if (dpt >= 0)
 		{
-			MainOperator::_currentDPT = dpt;
+			MainOperator::_currentDPT = round(dpt);
 		}
 	}
 
@@ -157,7 +165,7 @@ namespace ClickerGameFramework
 	{
 		if (dpc >= 0)
 		{
-			MainOperator::_currentDPC = dpc;
+			MainOperator::_currentDPC = round(dpc);
 		}
 	}
 
@@ -168,12 +176,12 @@ namespace ClickerGameFramework
 	//pass in negative to subtract money
 	void MainOperator::addToCurrentDollars(float amount)
 	{
-		MainOperator::_currentDollars += amount;
+		MainOperator::_currentDollars += round(amount);
 	}
 
 	//run everytime click button is clicked
 	void MainOperator::doClick(float amount)
 	{
-		MainOperator::addToCurrentDollars(amount);
+		MainOperator::addToCurrentDollars(round(amount));
 	}
 }

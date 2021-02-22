@@ -7,3 +7,7 @@ C:\Users\jake.leggore\Documents\Projects\ClickerGame\ClickerGameFunctions\obj\De
 C:\Users\jake.leggore\Documents\Projects\ClickerGame\ClickerGameFunctions\obj\Debug\ClickerGameFunctions.pdb
 C:\Users\jake.leggore\Documents\Projects\ClickerGame\Compile\ClickerGameFunctions.dll
 C:\Users\jake.leggore\Documents\Projects\ClickerGame\Compile\ClickerGameFunctions.pdb
+C:\Users\jake.leggore\Documents\GitHub\Projects\ClickerGame\Compile\ClickerGameFunctions.dll
+C:\Users\jake.leggore\Documents\GitHub\Projects\ClickerGame\Compile\ClickerGameFunctions.pdb
+C:\Users\jake.leggore\Documents\GitHub\Projects\ClickerGame\ClickerGameFunctions\obj\Debug\ClickerGameFunctions.dll
+C:\Users\jake.leggore\Documents\GitHub\Projects\ClickerGame\ClickerGameFunctions\obj\Debug\ClickerGameFunctions.pdb

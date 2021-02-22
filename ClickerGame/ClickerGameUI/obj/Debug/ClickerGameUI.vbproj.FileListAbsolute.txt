@@ -7,3 +7,12 @@ C:\Users\jake.leggore\Documents\Projects\ClickerGame\Compile\ClickerGameUI.pdb
 C:\Users\jake.leggore\Documents\Projects\ClickerGame\ClickerGameUI\obj\Debug\ClickerGameUI.exe
 C:\Users\jake.leggore\Documents\Projects\ClickerGame\ClickerGameUI\obj\Debug\ClickerGameUI.pdb
 C:\Users\jake.leggore\Documents\Projects\ClickerGame\ClickerGameUI\obj\Debug\ClickerGameUI.Form1.resources
+C:\Users\jake.leggore\Documents\GitHub\Projects\ClickerGame\Compile\ClickerGameUI.exe.config
+C:\Users\jake.leggore\Documents\GitHub\Projects\ClickerGame\ClickerGameUI\obj\Debug\ClickerGameUI.exe
+C:\Users\jake.leggore\Documents\GitHub\Projects\ClickerGame\ClickerGameUI\obj\Debug\ClickerGameUI.pdb
+C:\Users\jake.leggore\Documents\GitHub\Projects\ClickerGame\Compile\ClickerGameUI.exe
+C:\Users\jake.leggore\Documents\GitHub\Projects\ClickerGame\Compile\ClickerGameUI.pdb
+C:\Users\jake.leggore\Documents\GitHub\Projects\ClickerGame\ClickerGameUI\obj\Debug\ClickerGameUI.vbprojResolveAssemblyReference.cache
+C:\Users\jake.leggore\Documents\GitHub\Projects\ClickerGame\ClickerGameUI\obj\Debug\ClickerGameUI.Resources.resources
+C:\Users\jake.leggore\Documents\GitHub\Projects\ClickerGame\ClickerGameUI\obj\Debug\ClickerGameUI.vbproj.GenerateResource.Cache
+C:\Users\jake.leggore\Documents\GitHub\Projects\ClickerGame\ClickerGameUI\obj\Debug\ClickerGameUI.GameForm.resources

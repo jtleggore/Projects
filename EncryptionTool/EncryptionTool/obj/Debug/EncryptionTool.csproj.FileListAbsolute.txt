@@ -9,3 +9,6 @@ C:\Users\sully\Documents\Projects\EncryptionTool\EncryptionTool\bin\Debug\Encryp
 C:\Users\sully\Documents\Projects\EncryptionTool\EncryptionTool\bin\Debug\EncryptionTool.exe
 C:\Users\sully\Documents\Projects\EncryptionTool\EncryptionTool\obj\Debug\EncryptionTool.exe
 C:\Users\sully\Documents\Projects\EncryptionTool\EncryptionTool\obj\Debug\EncryptionTool.csprojAssemblyReference.cache
+C:\Users\jake.leggore\Documents\GitHub\Projects\EncryptionTool\EncryptionTool\bin\Debug\EncryptionTool.exe.config
+C:\Users\jake.leggore\Documents\GitHub\Projects\EncryptionTool\EncryptionTool\obj\Debug\EncryptionTool.exe
+C:\Users\jake.leggore\Documents\GitHub\Projects\EncryptionTool\EncryptionTool\obj\Debug\EncryptionTool.pdb

@@ -2,8 +2,9 @@
 
 Public Module ClickerGameLogic
 
-    Private buildingTick As Integer
+    Private DECIMAL_PRECISION As Integer = 2
 
+    Private buildingTick As Integer
     Private buildingList As New List(Of Building)
     'Private building1
     'Private building2
@@ -12,9 +13,21 @@ Public Module ClickerGameLogic
         buildingTick = 1000
         MainOperator.setCurrentDPC(0.01)
 
-        buildingList.Add(New Building("building1", 0.01, 0.25))
+        buildingList.Add(New Building("building1", 0.01, 0.25, 1.05))
         buildingList.Add(New Building("building2", 0.05, 1))
+        buildingList.Add(New Building("building3", 0.25, 5.5))
     End Sub
+
+    'Returns Building names to the UI for purpose of dynamically building the buttons
+    Public Function ReturnBuildingNames() As List(Of String)
+        Dim nameList As New List(Of String)
+
+        For Each building In buildingList
+            nameList.Add(building.getName)
+        Next
+
+        Return nameList
+    End Function
 
     Public Sub StartGame()
         'Call RunAndAwait for each building that exists
@@ -39,15 +52,15 @@ Public Module ClickerGameLogic
 
 #Region "Wrapper Functions"
     Public Function GetCurrentDollars() As Single
-        Return MainOperator.getCurrentDollars
+        Return Math.Round(MainOperator.getCurrentDollars, DECIMAL_PRECISION)
     End Function
 
     Public Function GetBuildingDPT(buildingNumber As Integer) As Single
-        Return buildingList(buildingNumber).getCurrentDPT
+        Return Math.Round(buildingList(buildingNumber).getCurrentDPT, DECIMAL_PRECISION)
     End Function
 
     Public Function GetBuildingCost(buildingNumber As Integer) As Single
-        Return buildingList(buildingNumber).getCurrentCost
+        Return Math.Round(buildingList(buildingNumber).getCurrentCost, DECIMAL_PRECISION)
     End Function
 
 #End Region

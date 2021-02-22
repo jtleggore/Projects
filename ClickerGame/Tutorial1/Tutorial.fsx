@@ -472,13 +472,13 @@ module OptionTypes =
     /// They are used extensively in F# code to represent the cases where many other
     /// languages would use null references.
 
-    type Customer = { zipCode : decimal option }
+    type Customer = { zipCode : float option }
 
     /// Abstract class that computes the shipping zone for the customer's zip code, 
     /// given implementations for the 'getState' and 'getShippingZone' abstract methods.
     [<AbstractClass>]
     type ShippingCalculator =
-        abstract getState : decimal -> string option
+        abstract getState : float -> string option
         abstract getShippingZone : string -> int
 
         /// Return the shipping zone corresponding to the customer's ZIP code
