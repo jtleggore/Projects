@@ -10,6 +10,39 @@ using namespace System;
 
 namespace ClickerGameFramework 
 {	
+	public ref class Upgrade
+	{
+	public:
+		delegate bool UnlockCriteria();
+		delegate String^ UpgradeBonus();
+
+	private:
+		float _baseCost;
+		String^ _name;
+		UnlockCriteria^ _unlocked;
+		UpgradeBonus^ _upgradeBonus;
+
+	public:
+		Upgrade(String^, float, UnlockCriteria^, UpgradeBonus^);
+
+		property String^ Name
+		{
+			String^ get();
+		};
+		property float BaseCost
+		{
+			float get();
+		};
+		property bool Unlocked
+		{
+			bool get();
+		};
+		property String^ UpgradeValue
+		{
+			String^ get();
+		};
+	};
+
 	public ref class Building
 	{
 	private:
@@ -22,37 +55,48 @@ namespace ClickerGameFramework
 		int _quantity;
 
 	public:
+		Building();
 		Building(String^, float, float);
 		Building(String^, float, float, float);
 
-		const float getBaseDPT();
+		property float BaseDPT 
+		{
+			float get();
+		};
+		property float BaseCost
+		{
+			float get();
+		};
+		property float CurrentDPT
+		{
+			float get();
+			void set(float);
+		};
+		property float CurrentCost
+		{
+			float get();
+			void set(float);
+		};
+		property float CostMultiplyer
+		{
+			float get();
+			void set(float);
+		};
+		property String^ Name
+		{
+			String^ get();
+		};
+		property int Quantity
+		{
+			int get();
+			void set(int);
+		};
 
-		const float getBaseCost();
-
-		const float getCurrentDPT();
-		void setCurrentDPT(float);
-
-		const float getCurrentCost();
-		void setCurrentCost(float);
-
-		const float getCostMultiplyer();
-		void setCostMultiplyer(float);
-
-		const String^ getName();
-
-		const int getQuantity();
-		void addToQuantity(int);
-
-		void addDPTToMainOperator();
+		//void addToQuantity(int);
+		//void addDPTToMainOperator();
 		void updateCost();
 
 		int Test(int);
-	};
-
-	public ref class Upgrade
-	{
-		private:
-			float _baseCost;
 	};
 
 	//represents the "game object"
@@ -61,29 +105,39 @@ namespace ClickerGameFramework
 		//DPC = dollars per click
 		//DPT = dollars per tick
 		private:
-			static float _baseDPC;
-			static float _baseDPT;
-			static float _currentDPT;
-			static float _currentDPC;
-			static float _currentDollars;
+			float _baseDPC;
+			float _baseDPT;
+			float _currentDPT;
+			float _currentDPC;
+			float _currentDollars;
 
 		public:
-			//static pseudo-constructor
-			static void InitializeMainOperator();
+			MainOperator();
 
-			static const float getBaseDPC();
+			property float BaseDPC
+			{
+				float get();
+			};
+			property float BaseDPT
+			{
+				float get();
+			};
+			property float CurrentDPT
+			{
+				float get();
+				void set(float);
+			};
+			property float CurrentDPC
+			{
+				float get();
+				void set(float);
+			};
+			property float CurrentDollars
+			{
+				float get();
+				void set(float);
+			};
 
-			static const float getBaseDPT();
-
-			static const float getCurrentDPT();
-			static void setCurrentDPT(float);
-
-			static const float getCurrentDPC();
-			static void setCurrentDPC(float);
-
-			static const float getCurrentDollars();
-			static void addToCurrentDollars(float);
-
-			static void doClick(float);
+			void doClick(float);
 	};
 }

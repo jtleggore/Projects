@@ -1,0 +1,25 @@
+<ClickerGame>
+  <MainOperator>
+    <CurrentDollars>0</CurrentDollars>
+    <CurrentDPC>1</CurrentDPC>
+    <CurrentDPT>0</CurrentDPT>
+  </MainOperator>
+  <Building>
+    <Quantity>0</Quantity>
+    <CostMultiplyer>1.05</CostMultiplyer>
+    <CurrentCost>0.25</CurrentCost>
+    <CurrentDPT>0</CurrentDPT>
+  </Building>
+  <Building>
+    <Quantity>0</Quantity>
+    <CostMultiplyer>1.15</CostMultiplyer>
+    <CurrentCost>1</CurrentCost>
+    <CurrentDPT>0</CurrentDPT>
+  </Building>
+  <Building>
+    <Quantity>0</Quantity>
+    <CostMultiplyer>1.15</CostMultiplyer>
+    <CurrentCost>5.5</CurrentCost>
+    <CurrentDPT>0</CurrentDPT>
+  </Building>
+</ClickerGame>

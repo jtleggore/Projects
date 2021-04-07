@@ -1,0 +1,3 @@
+Ideas:
+Add an "energy" like system, where each purchase costs a set amount of energy
+Extend type Building to add other currencies and what-not to fucntionality

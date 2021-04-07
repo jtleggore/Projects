@@ -11,36 +11,73 @@ Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e0
 	hash=None, flags=None
 Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
 	hash=None, flags=None
+Class ClickerGameFramework.Upgrade: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String, Single, UnlockCriteria, UpgradeBonus): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String UpgradeValue 'get ' : 
+    Boolean Unlocked 'get ' : 
+    Single BaseCost 'get ' : 
+    System.String Name 'get ' : 
+  Methods:
+    get_Name(): PrivateScope, Public, HideBySig, SpecialName
+    get_BaseCost(): PrivateScope, Public, HideBySig, SpecialName
+    get_Unlocked(): PrivateScope, Public, HideBySig, SpecialName
+    get_UpgradeValue(): PrivateScope, Public, HideBySig, SpecialName
+Class ClickerGameFramework.Upgrade+UnlockCriteria: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class ClickerGameFramework.Upgrade+UpgradeBonus: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
 Class ClickerGameFramework.Building: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(System.String, Single, Single, Single): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
     Void .ctor(System.String, Single, Single): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int32 Quantity 'get set' : 
+    System.String Name 'get ' : 
+    Single CostMultiplyer 'get set' : 
+    Single CurrentCost 'get set' : 
+    Single CurrentDPT 'get set' : 
+    Single BaseCost 'get ' : 
+    Single BaseDPT 'get ' : 
   Methods:
-    getBaseDPT(): PrivateScope, Public, HideBySig
-    getBaseCost(): PrivateScope, Public, HideBySig
-    getCurrentDPT(): PrivateScope, Public, HideBySig
-    setCurrentDPT(Single): PrivateScope, Public, HideBySig
-    getCurrentCost(): PrivateScope, Public, HideBySig
-    setCurrentCost(Single): PrivateScope, Public, HideBySig
-    getCostMultiplyer(): PrivateScope, Public, HideBySig
-    setCostMultiplyer(Single): PrivateScope, Public, HideBySig
-    getName(): PrivateScope, Public, HideBySig
-    getQuantity(): PrivateScope, Public, HideBySig
-    addToQuantity(Int32): PrivateScope, Public, HideBySig
-    addDPTToMainOperator(): PrivateScope, Public, HideBySig
+    get_BaseDPT(): PrivateScope, Public, HideBySig, SpecialName
+    get_BaseCost(): PrivateScope, Public, HideBySig, SpecialName
+    get_CurrentDPT(): PrivateScope, Public, HideBySig, SpecialName
+    set_CurrentDPT(Single): PrivateScope, Public, HideBySig, SpecialName
+    get_CurrentCost(): PrivateScope, Public, HideBySig, SpecialName
+    set_CurrentCost(Single): PrivateScope, Public, HideBySig, SpecialName
+    get_CostMultiplyer(): PrivateScope, Public, HideBySig, SpecialName
+    set_CostMultiplyer(Single): PrivateScope, Public, HideBySig, SpecialName
+    get_Name(): PrivateScope, Public, HideBySig, SpecialName
+    get_Quantity(): PrivateScope, Public, HideBySig, SpecialName
+    set_Quantity(Int32): PrivateScope, Public, HideBySig, SpecialName
     updateCost(): PrivateScope, Public, HideBySig
     Test(Int32): PrivateScope, Public, HideBySig
-Class ClickerGameFramework.Upgrade: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
-    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class ClickerGameFramework.MainOperator: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Single CurrentDollars 'get set' : 
+    Single CurrentDPC 'get set' : 
+    Single CurrentDPT 'get set' : 
+    Single BaseDPT 'get ' : 
+    Single BaseDPC 'get ' : 
   Methods:
-    InitializeMainOperator(): PrivateScope, Public, Static, HideBySig
-    getBaseDPC(): PrivateScope, Public, Static, HideBySig
-    getBaseDPT(): PrivateScope, Public, Static, HideBySig
-    getCurrentDPT(): PrivateScope, Public, Static, HideBySig
-    setCurrentDPT(Single): PrivateScope, Public, Static, HideBySig
-    getCurrentDPC(): PrivateScope, Public, Static, HideBySig
-    setCurrentDPC(Single): PrivateScope, Public, Static, HideBySig
-    getCurrentDollars(): PrivateScope, Public, Static, HideBySig
-    addToCurrentDollars(Single): PrivateScope, Public, Static, HideBySig
-    doClick(Single): PrivateScope, Public, Static, HideBySig
+    get_BaseDPC(): PrivateScope, Public, HideBySig, SpecialName
+    get_BaseDPT(): PrivateScope, Public, HideBySig, SpecialName
+    get_CurrentDPT(): PrivateScope, Public, HideBySig, SpecialName
+    set_CurrentDPT(Single): PrivateScope, Public, HideBySig, SpecialName
+    get_CurrentDPC(): PrivateScope, Public, HideBySig, SpecialName
+    set_CurrentDPC(Single): PrivateScope, Public, HideBySig, SpecialName
+    get_CurrentDollars(): PrivateScope, Public, HideBySig, SpecialName
+    set_CurrentDollars(Single): PrivateScope, Public, HideBySig, SpecialName
+    doClick(Single): PrivateScope, Public, HideBySig

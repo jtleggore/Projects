@@ -22,10 +22,33 @@ ClickerGameLogic
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="M:ClickerGameLogic.ClickerGameLogic.ReturnBuildingNames">
+ <summary>
+ Returns Building names To the UI For purpose Of dynamically building the buttons
+ </summary>
+</member>
+<member name="M:ClickerGameLogic.ClickerGameLogic.ReturnUpgradeNames">
+ <summary>
+ Returns Upgrade names To the UI For purpose Of dynamically building the buttons
+ </summary>
+</member>
 <member name="M:ClickerGameLogic.Runner.RunAndAwait(System.Action,System.Int32)">
  <summary>
  Runs a method repeatedly after each delay time has passed
  </summary>
+</member>
+<member name="M:ClickerGameLogic.SaveFileHandler.SaveGame">
+ <summary>
+ Serializes all objects of the game and saves xml to file
+ </summary>
+</member>
+<member name="M:ClickerGameLogic.Extensions.Serialize``1(``0)">
+ <summary>
+ Serializes object into XML
+ </summary>
+ <typeparam name="T"></typeparam>
+ <param name="val"></param>
+ <returns></returns>
 </member>
 </members>
 </doc>

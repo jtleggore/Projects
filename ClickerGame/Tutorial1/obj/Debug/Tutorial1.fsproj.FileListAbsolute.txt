@@ -5,3 +5,10 @@ C:\Users\jake.leggore\Documents\Projects\ClickerGame\Tutorial1\bin\Debug\FSharp.
 C:\Users\jake.leggore\Documents\Projects\ClickerGame\Tutorial1\bin\Debug\FSharp.Core.xml
 C:\Users\jake.leggore\Documents\Projects\ClickerGame\Tutorial1\obj\Debug\Tutorial1.exe
 C:\Users\jake.leggore\Documents\Projects\ClickerGame\Tutorial1\obj\Debug\Tutorial1.pdb
+C:\Users\jake.leggore\Documents\GitHub\Projects\ClickerGame\Tutorial1\bin\Debug\Tutorial1.XML
+C:\Users\jake.leggore\Documents\GitHub\Projects\ClickerGame\Tutorial1\bin\Debug\Tutorial1.exe
+C:\Users\jake.leggore\Documents\GitHub\Projects\ClickerGame\Tutorial1\bin\Debug\Tutorial1.pdb
+C:\Users\jake.leggore\Documents\GitHub\Projects\ClickerGame\Tutorial1\bin\Debug\FSharp.Core.dll
+C:\Users\jake.leggore\Documents\GitHub\Projects\ClickerGame\Tutorial1\bin\Debug\FSharp.Core.xml
+C:\Users\jake.leggore\Documents\GitHub\Projects\ClickerGame\Tutorial1\obj\Debug\Tutorial1.exe
+C:\Users\jake.leggore\Documents\GitHub\Projects\ClickerGame\Tutorial1\obj\Debug\Tutorial1.pdb
