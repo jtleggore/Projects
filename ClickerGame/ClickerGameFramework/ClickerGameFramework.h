@@ -4,26 +4,30 @@
 
 #define DEFAULT_DPC 1
 #define DEFAULT_DPT 0
-#define DEFAULT_MULT 1.15
+#define DEFAULT_DPT_MULT 1
+#define DEFAULT_COST_MULT 1
+#define DEFAULT_NEXTCOST_MULT 1.15
 
 using namespace System;
 
+//todo: replace multiplyers with F# equations
 namespace ClickerGameFramework 
 {	
-	public ref class Upgrade
+	//Class that holds common data of all game constructs
+	public ref class BaseGameClass abstract
 	{
-	public:
-		delegate bool UnlockCriteria();
-		delegate String^ UpgradeBonus();
-
-	private:
+	protected:
 		float _baseCost;
+		float _currentCost;
 		String^ _name;
-		UnlockCriteria^ _unlocked;
-		UpgradeBonus^ _upgradeBonus;
+		//cost mult specific to an instance
+		float _costMultiplier;
+
+		//cost mult to entire game
+		static float _globalCostMultiplier = DEFAULT_COST_MULT;
 
 	public:
-		Upgrade(String^, float, UnlockCriteria^, UpgradeBonus^);
+		BaseGameClass();
 
 		property String^ Name
 		{
@@ -33,37 +37,83 @@ namespace ClickerGameFramework
 		{
 			float get();
 		};
+		property float CurrentCost
+		{
+			float get();
+			void set(float);
+		};
+		property float CostMultiplier
+		{
+			float get();
+			void set(float);
+		};
+
+		static property float GlobalCostMultiplier
+		{
+			float get();
+			void set(float);
+		};
+	};
+
+	/*//Class that holds common data of all DPT (Dollars per tick) game objects
+	private ref class BaseDPTObject : BaseGameClass
+	{
+	private:
+		float _baseDPT;
+		float _currentDPT;
+		float _dptMultiplier;
+	};
+
+	//Class that holds common data of all DPC (Dollars per click) game objects
+	private ref class BaseDPCObject : BaseGameClass
+	{
+	private:
+		float _baseDPC;
+		float _currentDPC;
+		float _dpcMultiplier;
+	};*/
+
+	public ref class Upgrade : BaseGameClass
+	{
+	public:
+		delegate bool UnlockCriteria();
+		delegate int UpgradeBonus();
+
+	private:
+		UnlockCriteria^ _unlocked;
+		UpgradeBonus^ _upgradeBonus;
+
+	public:
+		Upgrade(String^ name, float baseCost, UnlockCriteria^ unlockMethod, UpgradeBonus^ upgradeMethod);
+
 		property bool Unlocked
 		{
 			bool get();
 		};
-		property String^ UpgradeValue
+		property int UpgradeValue
 		{
-			String^ get();
+			int get();
 		};
 	};
 
-	public ref class Building
+	public ref class Building : BaseGameClass
 	{
 	private:
 		float _baseDPT;
-		float _baseCost;
 		float _currentDPT;
-		float _currentCost;
-		float _costMultiplyer;
-		String^ _name;
+		float _nextCostMultiplier;
 		int _quantity;
+		//DPT mult specific to an instance
+		float _dptMultiplier;
+
+		//DPT mult to entire game
+		static float _globalDptMultiplier;
 
 	public:
-		Building();
-		Building(String^, float, float);
-		Building(String^, float, float, float);
+		Building(String^ name, float baseDPT, float baseCost);
+		Building(String^ name, float baseDPT, float baseCost, float costMult);
 
 		property float BaseDPT 
-		{
-			float get();
-		};
-		property float BaseCost
 		{
 			float get();
 		};
@@ -72,31 +122,29 @@ namespace ClickerGameFramework
 			float get();
 			void set(float);
 		};
-		property float CurrentCost
+		property float nextCostMultiplier
 		{
 			float get();
 			void set(float);
-		};
-		property float CostMultiplyer
-		{
-			float get();
-			void set(float);
-		};
-		property String^ Name
-		{
-			String^ get();
 		};
 		property int Quantity
 		{
 			int get();
 			void set(int);
 		};
+		property float DPTMultiplier
+		{
+			float get();
+			void set(float);
+		};
 
-		//void addToQuantity(int);
-		//void addDPTToMainOperator();
+		static property float GlobalDPTMultiplier
+		{
+			float get();
+			void set(float);
+		};
+
 		void updateCost();
-
-		int Test(int);
 	};
 
 	//represents the "game object"

@@ -1,0 +1,7 @@
+C:\Users\jake.leggore\Documents\GitHub\Projects\CLI_Tool\bin\Debug\CLI_Tool.dll.config
+C:\Users\jake.leggore\Documents\GitHub\Projects\CLI_Tool\bin\Debug\CLI_Tool.dll
+C:\Users\jake.leggore\Documents\GitHub\Projects\CLI_Tool\bin\Debug\CLI_Tool.pdb
+C:\Users\jake.leggore\Documents\GitHub\Projects\CLI_Tool\obj\Debug\CLI_Tool.csproj.CoreCompileInputs.cache
+C:\Users\jake.leggore\Documents\GitHub\Projects\CLI_Tool\obj\Debug\CLI_Tool.dll
+C:\Users\jake.leggore\Documents\GitHub\Projects\CLI_Tool\obj\Debug\CLI_Tool.pdb
+C:\Users\jake.leggore\Documents\GitHub\Projects\CLI_Tool\obj\Debug\CLI_Tool.csproj.AssemblyReference.cache

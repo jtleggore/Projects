@@ -23,6 +23,7 @@ Public Class GameForm
             _refreshTime = 100
 
             GenerateBuildings()
+            GenerateUpgrades()
             StartGame()
 
             RunAndAwait(AddressOf RefreshUI, _refreshTime)
@@ -44,6 +45,18 @@ Public Class GameForm
         Try
             Dim currentBuilding As MyButton = DirectCast(sender, MyButton)
             EventClickBuilding(currentBuilding.ID)
+        Catch ex As Exception
+            DisplayError(ex)
+        End Try
+
+        'handler function requires return
+        Return True
+    End Function
+
+    Private Function ButtonUpgrade_Click(sender As Object, e As EventArgs) As Boolean
+        Try
+            Dim currentUpgrade As MyButton = DirectCast(sender, MyButton)
+            EventClickUpgrade(currentUpgrade.ID)
         Catch ex As Exception
             DisplayError(ex)
         End Try
@@ -91,8 +104,8 @@ Public Class GameForm
 
         For Each buildingName In _buildingNames
 
-            Dim newUpgradeButton As New MyButton
-            With newUpgradeButton
+            Dim newBuildingButton As New MyButton
+            With newBuildingButton
                 .Name = "button" & buildingName
                 .Text = buildingName
                 .Size = New Size(75, 23)
@@ -100,8 +113,7 @@ Public Class GameForm
                 .ID = _currentBuildingIndex
             End With
 
-            AddHandler newUpgradeButton.Click, AddressOf ButtonBuilding_Click
-            'AddHandler newUpgradeButton.Click, Function(sender, e) ButtonBuilding_Click(_currentBuildingIndex)
+            AddHandler newBuildingButton.Click, AddressOf ButtonBuilding_Click
 
             Dim newBuildingCostLabel As New MyLabel
             With newBuildingCostLabel
@@ -127,7 +139,7 @@ Public Class GameForm
             yLoc += 29
 
             With LayoutPanelBuildings.Controls
-                .Add(newUpgradeButton)
+                .Add(newBuildingButton)
                 .Add(newBuildingCostLabel)
                 .Add(newBuildingDPTLabel)
             End With
@@ -158,8 +170,7 @@ Public Class GameForm
                 .ID = _currentUpgradeIndex
             End With
 
-            AddHandler newUpgradeButton.Click, AddressOf ButtonBuilding_Click
-            'AddHandler newUpgradeButton.Click, Function(sender, e) ButtonBuilding_Click(_currentBuildingIndex)
+            AddHandler newUpgradeButton.Click, AddressOf ButtonUpgrade_Click
 
             Dim newUpgradeCostLabel As New MyLabel
             With newUpgradeCostLabel

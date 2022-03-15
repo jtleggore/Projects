@@ -11,16 +11,30 @@ Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e0
 	hash=None, flags=None
 Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
 	hash=None, flags=None
-Class ClickerGameFramework.Upgrade: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
-    Void .ctor(System.String, Single, UnlockCriteria, UpgradeBonus): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class ClickerGameFramework.BaseGameClass: AutoLayout, AnsiClass, Class, Public, Abstract, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Properties:
-    System.String UpgradeValue 'get ' : 
-    Boolean Unlocked 'get ' : 
+    Single GlobalCostMultiplier 'get set' : 
+    Single CostMultiplier 'get set' : 
+    Single CurrentCost 'get set' : 
     Single BaseCost 'get ' : 
     System.String Name 'get ' : 
   Methods:
     get_Name(): PrivateScope, Public, HideBySig, SpecialName
     get_BaseCost(): PrivateScope, Public, HideBySig, SpecialName
+    get_CurrentCost(): PrivateScope, Public, HideBySig, SpecialName
+    set_CurrentCost(Single): PrivateScope, Public, HideBySig, SpecialName
+    get_CostMultiplier(): PrivateScope, Public, HideBySig, SpecialName
+    set_CostMultiplier(Single): PrivateScope, Public, HideBySig, SpecialName
+    get_GlobalCostMultiplier(): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_GlobalCostMultiplier(Single): PrivateScope, Public, Static, HideBySig, SpecialName
+Class ClickerGameFramework.Upgrade: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ClickerGameFramework.BaseGameClass
+    Void .ctor(System.String, Single, UnlockCriteria, UpgradeBonus): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int32 UpgradeValue 'get ' : 
+    Boolean Unlocked 'get ' : 
+  Methods:
     get_Unlocked(): PrivateScope, Public, HideBySig, SpecialName
     get_UpgradeValue(): PrivateScope, Public, HideBySig, SpecialName
 Class ClickerGameFramework.Upgrade+UnlockCriteria: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
@@ -38,31 +52,29 @@ Class ClickerGameFramework.Upgrade+UpgradeBonus: AutoLayout, AnsiClass, Class, N
     BeginInvoke(AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
     EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
 Class ClickerGameFramework.Building: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ClickerGameFramework.BaseGameClass
     Void .ctor(System.String, Single, Single, Single): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
     Void .ctor(System.String, Single, Single): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
-    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Properties:
+    Single GlobalDPTMultiplier 'get set' : 
+    Single DPTMultiplier 'get set' : 
     Int32 Quantity 'get set' : 
-    System.String Name 'get ' : 
-    Single CostMultiplyer 'get set' : 
-    Single CurrentCost 'get set' : 
+    Single nextCostMultiplier 'get set' : 
     Single CurrentDPT 'get set' : 
-    Single BaseCost 'get ' : 
     Single BaseDPT 'get ' : 
   Methods:
     get_BaseDPT(): PrivateScope, Public, HideBySig, SpecialName
-    get_BaseCost(): PrivateScope, Public, HideBySig, SpecialName
     get_CurrentDPT(): PrivateScope, Public, HideBySig, SpecialName
     set_CurrentDPT(Single): PrivateScope, Public, HideBySig, SpecialName
-    get_CurrentCost(): PrivateScope, Public, HideBySig, SpecialName
-    set_CurrentCost(Single): PrivateScope, Public, HideBySig, SpecialName
-    get_CostMultiplyer(): PrivateScope, Public, HideBySig, SpecialName
-    set_CostMultiplyer(Single): PrivateScope, Public, HideBySig, SpecialName
-    get_Name(): PrivateScope, Public, HideBySig, SpecialName
+    get_nextCostMultiplier(): PrivateScope, Public, HideBySig, SpecialName
+    set_nextCostMultiplier(Single): PrivateScope, Public, HideBySig, SpecialName
     get_Quantity(): PrivateScope, Public, HideBySig, SpecialName
     set_Quantity(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_DPTMultiplier(): PrivateScope, Public, HideBySig, SpecialName
+    set_DPTMultiplier(Single): PrivateScope, Public, HideBySig, SpecialName
+    get_GlobalDPTMultiplier(): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_GlobalDPTMultiplier(Single): PrivateScope, Public, Static, HideBySig, SpecialName
     updateCost(): PrivateScope, Public, HideBySig
-    Test(Int32): PrivateScope, Public, HideBySig
 Class ClickerGameFramework.MainOperator: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Properties:

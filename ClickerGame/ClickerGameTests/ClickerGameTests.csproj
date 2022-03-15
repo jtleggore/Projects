@@ -69,6 +69,14 @@
       <Project>{137c8fe7-9554-45af-99b2-2432b6c93dc7}</Project>
       <Name>ClickerGameFramework</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ClickerGameLogic\ClickerGameLogic.vbproj">
+      <Project>{d2f67f97-a460-484e-a171-da6164103858}</Project>
+      <Name>ClickerGameLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClickerGameUI\ClickerGameUI.vbproj">
+      <Project>{aa536627-6e32-4ace-b664-20b093285a89}</Project>
+      <Name>ClickerGameUI</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

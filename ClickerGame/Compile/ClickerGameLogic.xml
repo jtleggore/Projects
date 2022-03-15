@@ -22,6 +22,12 @@ ClickerGameLogic
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="M:ClickerGameLogic.ClickerGameLogic.SetUpgradeBonus1">
+ <summary>
+ Multiplies DPT of 1st building by 2
+ </summary>
+ <returns></returns>
+</member>
 <member name="M:ClickerGameLogic.ClickerGameLogic.ReturnBuildingNames">
  <summary>
  Returns Building names To the UI For purpose Of dynamically building the buttons

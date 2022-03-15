@@ -19,23 +19,69 @@ namespace ClickerGameFramework
 		return (float)newVal / 100;
 	}
 
+	BaseGameClass::BaseGameClass()
+	{
+		_costMultiplier = DEFAULT_COST_MULT;
+	}
+	
+	String^ BaseGameClass::Name::get()
+	{
+		return BaseGameClass::_name;
+	}
+
+	float BaseGameClass::BaseCost::get()
+	{
+		return BaseGameClass::_baseCost;
+	}
+
+	float BaseGameClass::CurrentCost::get()
+	{
+		return BaseGameClass::_currentCost;
+	}
+	void BaseGameClass::CurrentCost::set(float amount)
+	{
+		if (amount > 0)
+		{
+			BaseGameClass::_currentCost = round(amount) * BaseGameClass::CostMultiplier * BaseGameClass::GlobalCostMultiplier;
+		}
+		//can passs in 0 to have the currentCost be recalculated
+		else 
+		{
+			BaseGameClass::_currentCost = BaseGameClass::_currentCost * BaseGameClass::CostMultiplier * BaseGameClass::GlobalCostMultiplier;
+		}
+	}
+
+	float BaseGameClass::CostMultiplier::get()
+	{
+		return BaseGameClass::_costMultiplier;
+	}
+	void BaseGameClass::CostMultiplier::set(float mult)
+	{
+		if (mult > 0)
+		{
+			BaseGameClass::_costMultiplier = round(mult);
+		}
+	}
+
+	float BaseGameClass::GlobalCostMultiplier::get()
+	{
+		return BaseGameClass::_globalCostMultiplier;
+	}
+	void BaseGameClass::GlobalCostMultiplier::set(float mult)
+	{
+		if (mult > 0)
+		{
+			BaseGameClass::_globalCostMultiplier = round(mult);
+		}
+	}
+
 	Upgrade::Upgrade(String^ name, float baseCost, UnlockCriteria^ unlockMethod, UpgradeBonus^ upgradeMethod)
 	{
 		_name = name;
 		_baseCost = round(baseCost);
+		_currentCost = _baseCost;
 		_unlocked = unlockMethod;
 		_upgradeBonus = upgradeMethod;
-
-	}
-
-	float Upgrade::BaseCost::get()
-	{
-		return Upgrade::_baseCost;
-	}
-
-	String^ Upgrade::Name::get()
-	{
-		return Upgrade::_name;
 	}
 
 	bool Upgrade::Unlocked::get()
@@ -43,14 +89,9 @@ namespace ClickerGameFramework
 		return _unlocked();
 	}
 
-	String^ Upgrade::UpgradeValue::get()
+	int Upgrade::UpgradeValue::get()
 	{
 		return _upgradeBonus();
-	}
-
-	Building::Building()
-	{
-
 	}
 
 	Building::Building(String^ name, float baseDPT, float baseCost)
@@ -59,8 +100,9 @@ namespace ClickerGameFramework
 		_baseDPT = round(baseDPT);
 		_baseCost = round(baseCost);
 		_currentDPT = DEFAULT_DPT;
+		_dptMultiplier = DEFAULT_DPT_MULT;
 		_currentCost = round(baseCost);
-		_costMultiplyer = DEFAULT_MULT;
+		_nextCostMultiplier = DEFAULT_NEXTCOST_MULT;
 	}
 
 	Building::Building(String^ name, float baseDPT, float baseCost, float costMult)
@@ -70,17 +112,12 @@ namespace ClickerGameFramework
 		_baseCost = round(baseCost);
 		_currentDPT = DEFAULT_DPT;
 		_currentCost = round(baseCost);
-		_costMultiplyer = round(costMult);
+		_nextCostMultiplier = round(costMult);
 	}
 
 	float Building::BaseDPT::get()
 	{
 		return Building::_baseDPT;
-	}
-
-	float Building::BaseCost::get()
-	{
-		return Building::_baseCost;
 	}
 
 	float Building::CurrentDPT::get()
@@ -89,36 +126,27 @@ namespace ClickerGameFramework
 	}
 	void Building::CurrentDPT::set(float amount)
 	{
-		Building::_currentDPT = round(amount);
-	}
-
-	float Building::CurrentCost::get()
-	{
-		return Building::_currentCost;
-	}
-	void Building::CurrentCost::set(float amount)
-	{
 		if (amount > 0)
 		{
-			Building::_currentCost = round(amount);
+			Building::_currentDPT = round(amount) * Building::DPTMultiplier * Building::GlobalDPTMultiplier;
+		}
+		//can pass in 0 to have the currentDPT be recalculated
+		else
+		{
+			Building::_currentDPT = Building::_currentDPT * Building::DPTMultiplier * Building::GlobalDPTMultiplier;
 		}
 	}
 
-	float Building::CostMultiplyer::get()
+	float Building::nextCostMultiplier::get()
 	{
-		return Building::_costMultiplyer;
+		return Building::_nextCostMultiplier;
 	}
-	void Building::CostMultiplyer::set(float mult)
+	void Building::nextCostMultiplier::set(float mult)
 	{
 		if (mult >= 1)
 		{
-			Building::_costMultiplyer = round(mult);
+			Building::_nextCostMultiplier = round(mult);
 		}
-	}
-
-	String^ Building::Name::get()
-	{
-		return Building::_name;
 	}
 
 	int Building::Quantity::get()
@@ -137,20 +165,38 @@ namespace ClickerGameFramework
 		}
 	}
 
+	float Building::DPTMultiplier::get()
+	{
+		return Building::_dptMultiplier;
+	}
+	void Building::DPTMultiplier::set(float mult)
+	{
+		if (mult > 0)
+		{
+			Building::_dptMultiplier = round(mult);
+		}
+	}
+
+	float Building::GlobalDPTMultiplier::get()
+	{
+		return Building::_globalDptMultiplier;
+	}
+	void Building::GlobalDPTMultiplier::set(float mult)
+	{
+		if (mult > 0)
+		{
+			Building::_globalDptMultiplier = round(mult);
+		}
+	}
+
 	//sets cost of building to the next cost
 	void Building::updateCost()
 	{
 		float currentCost = Building::CurrentCost;
-		float costMult = Building::CostMultiplyer;
+		float costMult = Building::nextCostMultiplier;
 
 		float nextCost = BuildingFunctions::nextCost(currentCost, costMult);
-		Building::CurrentCost = round(nextCost);
-	}
-
-	int Building::Test(int test)
-	{
-		float a = MainFunctions::moneyMultiplyer(1, 1, 1);
-		return test * 3;
+		Building::CurrentCost = round(nextCost) * BaseGameClass::CostMultiplier * BaseGameClass::GlobalCostMultiplier;
 	}
 
 	MainOperator::MainOperator()

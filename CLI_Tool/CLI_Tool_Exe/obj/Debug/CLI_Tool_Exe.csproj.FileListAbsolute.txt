@@ -1,0 +1,10 @@
+C:\Users\jake.leggore\Documents\GitHub\Projects\CLI_Tool\CLI_Tool_Exe\bin\Debug\CLI_Tool_Exe.exe.config
+C:\Users\jake.leggore\Documents\GitHub\Projects\CLI_Tool\CLI_Tool_Exe\bin\Debug\CLI_Tool_Exe.exe
+C:\Users\jake.leggore\Documents\GitHub\Projects\CLI_Tool\CLI_Tool_Exe\bin\Debug\CLI_Tool_Exe.pdb
+C:\Users\jake.leggore\Documents\GitHub\Projects\CLI_Tool\CLI_Tool_Exe\bin\Debug\CLI_Tool.dll
+C:\Users\jake.leggore\Documents\GitHub\Projects\CLI_Tool\CLI_Tool_Exe\bin\Debug\CLI_Tool.pdb
+C:\Users\jake.leggore\Documents\GitHub\Projects\CLI_Tool\CLI_Tool_Exe\obj\Debug\CLI_Tool_Exe.csproj.AssemblyReference.cache
+C:\Users\jake.leggore\Documents\GitHub\Projects\CLI_Tool\CLI_Tool_Exe\obj\Debug\CLI_Tool_Exe.csproj.CoreCompileInputs.cache
+C:\Users\jake.leggore\Documents\GitHub\Projects\CLI_Tool\CLI_Tool_Exe\obj\Debug\CLI_Tool_Exe.csproj.CopyComplete
+C:\Users\jake.leggore\Documents\GitHub\Projects\CLI_Tool\CLI_Tool_Exe\obj\Debug\CLI_Tool_Exe.exe
+C:\Users\jake.leggore\Documents\GitHub\Projects\CLI_Tool\CLI_Tool_Exe\obj\Debug\CLI_Tool_Exe.pdb

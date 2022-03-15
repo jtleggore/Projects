@@ -42,7 +42,7 @@ Public Module ClickerGameLogic
         BuildingList.Add(New Building("building3", 0.25, 5.5))
         BuildingList.Add(New Building("building4", 0.95, 20, 1.5))
 
-        UpgradeList.Add(New Upgrade("upgrade1", 0.01, AddressOf UnlockUpgrade1, AddressOf SetUpgradeBonus))
+        UpgradeList.Add(New Upgrade("upgrade1", 0.01, AddressOf UnlockUpgrade1, AddressOf SetUpgradeBonus1))
     End Sub
 
     Public Function UnlockUpgrade1() As Boolean
@@ -52,8 +52,14 @@ Public Module ClickerGameLogic
             Return False
         End If
     End Function
-    Public Function SetUpgradeBonus() As String
-        Return ""
+
+    ''' <summary>
+    ''' Multiplies DPT of 1st building by 2
+    ''' </summary>
+    ''' <returns></returns>
+    Public Function SetUpgradeBonus1() As Integer
+        BuildingList(0).CurrentDPT *= 2
+        Return 1
     End Function
 
     ''' <summary>
@@ -104,6 +110,17 @@ Public Module ClickerGameLogic
             mainGame.CurrentDollars += -1 * currentCost
             _buildingList(buildingNumber).Quantity += 1
             _buildingList(buildingNumber).updateCost()
+        End If
+    End Sub
+
+    Public Sub EventClickUpgrade(upgradeNumber As Integer)
+        Dim currentCost As Single = _upgradeList(upgradeNumber).CurrentCost
+
+        If currentCost <= mainGame.CurrentDollars Then
+            mainGame.CurrentDollars += -1 * currentCost
+            'Run whatever the UpgradeBonus method is
+            Dim temp As Integer = _upgradeList(upgradeNumber).UpgradeValue
+
         End If
     End Sub
 

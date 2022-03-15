@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\NUnit3TestAdapter.4.2.1\build\net35\NUnit3TestAdapter.props" Condition="Exists('..\packages\NUnit3TestAdapter.4.2.1\build\net35\NUnit3TestAdapter.props')" />
+  <Import Project="..\packages\NUnit.3.13.2\build\NUnit.props" Condition="Exists('..\packages\NUnit.3.13.2\build\NUnit.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7A394C16-9222-41D5-99B9-E92C3D505EE2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CLI_Tool_Tests</RootNamespace>
+    <AssemblyName>CLI_Tool_Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CLI_Tool">
+      <HintPath>..\obj\Debug\CLI_Tool.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=3.13.2.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.13.2\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="UnitTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Testdata\FilePaths.txt" />
+    <Content Include="Testdata\test1.txt" />
+    <Content Include="Testdata\test10.txt" />
+    <Content Include="Testdata\test11.txt" />
+    <Content Include="Testdata\test12.txt" />
+    <Content Include="Testdata\test13.txt" />
+    <Content Include="Testdata\test14.txt" />
+    <Content Include="Testdata\test15.txt" />
+    <Content Include="Testdata\test16.txt" />
+    <Content Include="Testdata\test17.txt" />
+    <Content Include="Testdata\test18.txt" />
+    <Content Include="Testdata\test19.txt" />
+    <Content Include="Testdata\test2.txt" />
+    <Content Include="Testdata\test20.txt" />
+    <Content Include="Testdata\test21.txt" />
+    <Content Include="Testdata\test22.txt" />
+    <Content Include="Testdata\test23.txt" />
+    <Content Include="Testdata\test24.txt" />
+    <Content Include="Testdata\test25.txt" />
+    <Content Include="Testdata\test26.txt" />
+    <Content Include="Testdata\test27.txt" />
+    <Content Include="Testdata\test28.txt" />
+    <Content Include="Testdata\test29.txt" />
+    <Content Include="Testdata\test3.txt" />
+    <Content Include="Testdata\test30.txt" />
+    <Content Include="Testdata\test31.txt" />
+    <Content Include="Testdata\test32.txt" />
+    <Content Include="Testdata\test33.txt" />
+    <Content Include="Testdata\test34.txt" />
+    <Content Include="Testdata\test35.txt" />
+    <Content Include="Testdata\test36.txt" />
+    <Content Include="Testdata\test37.txt" />
+    <Content Include="Testdata\test38.txt" />
+    <Content Include="Testdata\test39.txt" />
+    <Content Include="Testdata\test4.txt" />
+    <Content Include="Testdata\test40.txt" />
+    <Content Include="Testdata\test41.txt" />
+    <Content Include="Testdata\test42.txt" />
+    <Content Include="Testdata\test43.txt" />
+    <Content Include="Testdata\test44.txt" />
+    <Content Include="Testdata\test45.txt" />
+    <Content Include="Testdata\test46.txt" />
+    <Content Include="Testdata\test47.txt" />
+    <Content Include="Testdata\test48.txt" />
+    <Content Include="Testdata\test49.txt" />
+    <Content Include="Testdata\test5.txt" />
+    <Content Include="Testdata\test50.txt" />
+    <Content Include="Testdata\test6.txt" />
+    <Content Include="Testdata\test7.txt" />
+    <Content Include="Testdata\test8.txt" />
+    <Content Include="Testdata\test9.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\NUnit.3.13.2\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit.3.13.2\build\NUnit.props'))" />
+    <Error Condition="!Exists('..\packages\NUnit3TestAdapter.4.2.1\build\net35\NUnit3TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit3TestAdapter.4.2.1\build\net35\NUnit3TestAdapter.props'))" />
+  </Target>
+</Project>
